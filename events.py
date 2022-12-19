@@ -1,11 +1,6 @@
 
 
 
-
-
-
-
-
 class Events:
 
     def __init__(self, events: list):
@@ -28,3 +23,5 @@ class Events:
         for l in self.__listeners:
             if l[0] == event:
                 await l[1](*args)
+
+
