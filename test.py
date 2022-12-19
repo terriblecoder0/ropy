@@ -1,11 +1,8 @@
 from ropy import Client
 
 
-key = ".ROBLOSECURITY TOKEN GOES HERE"
-
-
+key = ".ROBLOSECURITY_KEY_GOES_HERE"
 client = Client(security_key=key,)
-
 
 
 @client.events.listen("ready")

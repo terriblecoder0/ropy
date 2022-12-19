@@ -6,6 +6,9 @@ from events import Events
 
 
 
+loop = asyncio.get_event_loop()
+
+
 class Client:
 
     def __init__(self, security_key: str, poll_interval = 60):
@@ -17,9 +20,9 @@ class Client:
 
         ok, result = verify.get_auth_user()
         if ok:
-            asyncio.run(self.events.invoke(event="ready"))
+            loop.run_until_complete(self.events.invoke("ready"))
         else:
-            asyncio.run(self.events.invoke(event="close"))
+            loop.run_until_complete(self.events.invoke("close"))
 
 
 
