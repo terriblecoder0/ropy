@@ -8,13 +8,13 @@ client = Client(security_key=key,)
 
 
 
-@client.events.listen(event="ready")
+@client.events.listen("ready")
 async def on_ready():
     print("Ready!")
 
 
 
-@client.events.listen(event="close")
+@client.events.listen("close")
 async def on_ready():
     print("Closed!")
 
