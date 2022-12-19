@@ -17,10 +17,8 @@ class Client:
 
         success, result = verify.get_auth_user()
         if success:
-            print(f"Bot is successfully running {result['name']}({result['id']})")
             asyncio.run(self.events.invoke(event="ready"))
         else:
-            print("Failed")
             asyncio.run(self.events.invoke(event="close"))
 
 

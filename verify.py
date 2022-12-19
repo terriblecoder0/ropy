@@ -15,7 +15,6 @@ def get_csrf_token() -> str:
 
 def get_auth_user() -> tuple[bool, str]:
 
-    
 
     response = requests.get(
         url="https://users.roblox.com/v1/users/authenticated",
@@ -27,3 +26,7 @@ def get_auth_user() -> tuple[bool, str]:
         return False, None
   
     return True, json.loads(response.content)
+
+
+
+    
