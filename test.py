@@ -15,7 +15,7 @@ async def on_ready():
 
 
 @client.events.listen("close")
-async def on_ready():
+async def on_close():
     print("Closed!")
 
 
