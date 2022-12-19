@@ -15,8 +15,8 @@ class Client:
 
     def login(self):
 
-        success, result = verify.get_auth_user()
-        if success:
+        ok, result = verify.get_auth_user()
+        if ok:
             asyncio.run(self.events.invoke(event="ready"))
         else:
             asyncio.run(self.events.invoke(event="close"))
